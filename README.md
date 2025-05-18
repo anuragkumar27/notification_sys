@@ -1,4 +1,3 @@
-
 # 📢 Notification Service API
 
 A simple notification service built with **Python Flask** and **SQLite** to send and retrieve user notifications. It supports Email, SMS, and In-App notification types.
@@ -77,20 +76,23 @@ The app will start on `http://127.0.0.1:5000/`.
 ## 🧪 API Endpoints
 
 ### 1. **Send a Notification**
+
 ```
 POST /notifications
 ```
 
 **Request Body (JSON):**
+
 ```json
 {
   "user_id": 1,
   "message": "Your order has been shipped.",
-  "type": "email"  // or "sms" or "in-app"
+  "type": "email" // or "sms" or "in-app"
 }
 ```
 
 **Response:**
+
 ```json
 {
   "notification_id": 5,
@@ -101,15 +103,13 @@ POST /notifications
 ---
 
 ### 2. **Get User Notifications**
+
 ```
 GET /users/<user_id>/notifications
 ```
 
-**Optional Query Params:**
-- `limit` (default: 10)
-- `offset` (default: 0)
-
 **Response:**
+
 ```json
 {
   "notifications": [
@@ -134,15 +134,6 @@ GET /users/<user_id>/notifications
 
 ---
 
-## 📄 Bonus Features (not included)
-You can extend the project with:
-- Background processing with a queue (e.g., RabbitMQ, Celery)
-- Retry logic for failed deliveries
-- Deployed backend (e.g., on Render or Heroku)
-- API documentation (e.g., Swagger UI)
-
----
-
 ## 📬 Contact
 
-Made with ❤️ by [Your Name]
+Made with by Anurag Kumar
